@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>D-Cell</title>
+
+		<!-- google fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+
+		<!-- Icon boxicon -->
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+		<!-- para el diseno de la barra de navegacion principal-->
+        <link rel="stylesheet" href="../styles/css/header.css">
+      
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="../styles/css/modulo_user/bootstrap.min.css"/>
+
+		<!-- Slick ajustar imagenes producto -->
+		<link type="text/css" rel="stylesheet" href="../styles/css/modulo_user/slick.css"/>
+
+		<!-- mover vista producto para movil -->
+		<link type="text/css" rel="stylesheet" href="../styles/css/modulo_user/slick-theme.css"/>
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="../styles/css/modulo_user/body-producto.css"/>
+
+		<!-- aqui comenzamos a enlazar los footers -->
+        <link rel="stylesheet" href="../styles/css/stick-footer.css">
+        <link rel="stylesheet" href="../styles/css/footer.css">
+
+	</head>
+
+	<body style="margin: 0">
+
+		<!-- header para navegacion en pagina -->
+		<header class="Contenedor header">
+
+			<!-- header principal de registro -->
+			<nav class="navbar-top">
+	
+				<ul class="navbar-top-ul">
+	
+					<li class="navbar-top-item">
+						<a href="modulo_usuario/registro.php" class="navbar-top-links"> <i class='bx bxl-facebook bx-sm'></i> </a>
+					</li>
+	
+					<li class="navbar-top-item">
+						<a href="modulo_usuario/login.php" class="navbar-top-links"> <i class='bx bxl-instagram bx-sm' ></i> </a>
+					</li>
+					
+					<li class="navbar-top-item">
+						<a href="modulo_usuario/login.php" class="navbar-top-links"> <i class='bx bxl-whatsapp bx-sm'></i> </a>
+					</li>
+					
+					<li class="navbar-top-item">
+						<a href="modulo_usuario/login.php" class="navbar-top-links"> <i class='bx bx-map bx-sm'></i> </a>
+					</li>
+					
+					<li class="navbar-top-item">
+						<a href="modulo_usuario/login.php" class="navbar-top-links"> <i class='bx bx-envelope bx-sm'></i> </a>
+					</li>
+	
+				</ul>
+	
+			</nav>
+	
+			<!-- header secundario de navegacion -->
+			<nav class="navbar">
+	
+				<!-- header de celular -->
+				<header class="nabvar-mobile">
+					<a class="navbar-mobile-link" href="index.html">D-Cell SB</a>
+					<div>
+						<a class="navbar-mobile-link" id="btn-mobile"><i class='bx bx-menu'></i></a>
+					</div>
+	
+					<!-- nombre de tienda en celular -->
+	
+				</header>
+	
+				<!-- header de computadora -->
+				<nav class="nav-menu" id="mySidenav">
+	
+					<!-- nombre de tienda en computadora -->
+					<div class="contenedor-logo-encabezado">
+						<!-- <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold" href="index.html">D-Cell Santa Barbara</a> -->
+						<a class="brand" href="index.html">D-Cell Santa Barbara</a>
+					</div>
+	
+					<!-- aqui comienza las opciones de navegacion -->
+					<ul class="nav-menu-ul">
+	
+						<!-- Smartphones -->
+						<li class="nav-menu-item" id="Smartphones">
+							<a class="nav-menu-link link-submenu" href="#">Smartphones</a>
+							<!-- submenu de Smartphones     -->
+							<div class="container-sub-menu">
+	
+								<!-- Primer columna de marcas -->
+								<ul class="sub-menu-ul">
+									<li class="nav-menu-li ">
+										<a class="nav-menu-link" href="#">
+											<strong>Vista general</strong>
+										</a>
+										<ul class="sub-menu-ul">
+											<li><a class="nav-menu-link" href="#">Blu</a></li>
+											<li><a class="nav-menu-link" href="#">Bmobile</a></li>
+											<li><a class="nav-menu-link" href="#">HTC</a></li>
+											<li><a class="nav-menu-link" href="#">Huawei</a></li>
+											<li><a class="nav-menu-link" href="#">Hyundai</a></li>
+											<li><a class="nav-menu-link" href="#">Iphone</a></li>
+											<li><a class="nav-menu-link" href="#">Lg</a></li>
+											<li><a class="nav-menu-link" href="#">Blackberry</a></li>
+										</ul>
+									</li>
+								</ul>
+								<!-- Segunda columna de marcas -->
+								<ul class="sub-menu-ul">
+									<li class="nav-menu-li">
+										<ul class="sub-menu-ul">
+											<li><a class="nav-menu-link" href="#">Motorola</a></li>
+											<li><a class="nav-menu-link" href="#">Samsung</a></li>
+											<li><a class="nav-menu-link" href="#">Xiami</a></li>
+											<li><a class="nav-menu-link" href="#">ZTE</a></li>
+											<li><a class="nav-menu-link" href="#">Lenovo</a></li>
+											<li><a class="nav-menu-link" href="#">Sony</a></li>
+											<li><a class="nav-menu-link" href="#">Nokia</a></li>
+											<li><a class="nav-menu-link" href="#">Microsoft</a></li>
+											<li><a class="nav-menu-link" href="#">Asus</a></li>
+										</ul>
+									</li>
+								</ul>
+								<!-- Tercer columna de marcas -->
+								<ul class="sub-menu-ul">
+									<li class="nav-menu-li">
+										<ul class="sub-menu-ul">
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+											<li><a class="nav-menu-link" href="#">Prueba</a></li>
+										</ul>
+									</li>
+								</ul>
+	
+							</div>
+						</li>
+	
+						<!-- Accesorios -->
+						<li class="nav-menu-item" id="Accesorios">
+							<a class="nav-menu-link link-submenu" href="#">Accesorios</a>
+							<!-- submenu de Accesorios -->
+							<div class="container-sub-menu2">
+	
+								<!-- Primer columna de accesorios -->
+								<ul class="sub-menu-ul">
+									<li class="nav-menu-li ">
+										<a class="nav-menu-link" href="#">
+											<strong>Vista general</strong>
+										</a>
+										<ul class="sub-menu-ul">
+											<li><a class="nav-menu-link" href="#">Cargadores</a></li>
+											<li><a class="nav-menu-link" href="#">Cables USB</a></li>
+											<li><a class="nav-menu-link" href="#">Cobertores</a></li>
+											<li><a class="nav-menu-link" href="#">Auriculares</a></li>
+											<li><a class="nav-menu-link" href="#">Cascos</a></li>
+											<li><a class="nav-menu-link" href="#">Memorias</a></li>
+											<li><a class="nav-menu-link" href="#">Vocinas</a></li>
+										</ul>
+									</li>
+								</ul>
+	
+	
+							</div>
+						</li>
+	
+						<!-- Smartwatch -->
+						<li class="nav-menu-item"><a href="brand.html" class="nav-menu-link">Smartwatch</a></li>
+						<!-- cerrar sesion -->
+						<li class="nav-menu-item"><a href="modulo_user_control/logout.php" class="nav-menu-link">cerrar sesion</a></li>
+					</ul>
+	
+				</nav>
+	
+			</nav>
+	
+		</header>
+
+		<!-- SECTION COMPRA PRODUCTO -->
+		<div class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="filas">
+
+					<!-- Product main img -->
+					<div class="col-md-5 col-md-push-2">
+
+						<div id="product-main-img">
+
+							<div class="product-preview">
+								<img src="../src/img/product01.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product02.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product03.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product04.png" alt="">
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /Product main img -->
+					
+					<!-- Product thumb imgs -->
+					<div class="col-md-2  col-md-pull-5">
+
+						<div id="product-imgs">
+
+							<div class="product-preview">
+								<img src="../src/img/product01.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product02.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product03.png" alt="">
+							</div>
+
+							<div class="product-preview">
+								<img src="../src/img/product04.png" alt="">
+							</div>
+							
+						</div>
+
+					</div>
+					<!-- /Product thumb imgs -->
+
+					<!-- Product details -->
+					<div class="col-md-5">
+
+						<div class="product-details">
+
+							<!-- Price produc -->
+							<div>
+								<h3 class="product-name">Laptop</h3>
+								<!-- <span class="product-available">In Stock</span> -->
+							</div>
+
+							<!-- Price produc -->
+							<div>
+								<h3 class="product-price">$980.00 
+									<del class="product-old-price">$990.00</del>
+								</h3>
+								<!-- <span class="product-available">In Stock</span> -->
+							</div>
+
+							<!-- Description product -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+							<div class="product-options">
+								<label>
+									Color
+									<select class="Select">
+										<option value="0">Red</option>
+										<option value="0">Red</option>
+										<option value="0">Red</option>
+										<option value="0">Red</option>
+										<option value="0">Red</option>
+									</select>
+									
+								</label>
+								<label>
+									Almacenamiento
+									<select class="Select">
+										<option value="0">4GB</option>
+										<option value="0">16GB</option>
+										<option value="0">32GB</option>
+										<option value="0">64GB</option>
+										<option value="0">124GB</option>
+									</select>
+								</label>
+							</div>
+
+							<div class="product-options">
+								<div class="qty-label">
+									Cantidad
+									<div class="input-number">
+										<input type="number" value="1">
+										<span class="qty-up">+</span>
+										<span class="qty-down">-</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="product-options">
+								<div class="btn">
+									Comprar
+								</div>
+							</div>
+			
+							<ul class="product-links">
+								<li>Compartir:</li>
+								<br>
+								<br>
+								<li><a href="#"><i class='bx bxl-facebook'></i></i></a></li>
+								<li><a href="#"><i class='bx bxl-instagram' ></i></i></a></li>
+								<li><a href="#"><i class='bx bxl-whatsapp' ></i></i></a></li>
+							</ul>
+
+						</div>
+
+					</div>
+					<!-- /Product details -->
+
+					<!-- Product tab nav info -->
+					<div class="col-md-12">
+
+						<div id="product-tab">
+
+							<!-- product tab navegation -->
+							<ul class="tab-nav">
+								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
+								<li><a data-toggle="tab" href="#tab2">Details</a></li>
+							</ul>
+							<!-- /product tab nav -->
+
+							<!-- product tab content -->
+							<div class="tab-content">
+
+								<!-- tab1  -->
+								<div id="tab1" class="tab-pane fade in active">
+									<div class="row">
+										<div class="col-md-12">
+											<p>aasdasdasdasd ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+												consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+												cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+												non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- /tab1  -->
+
+								<!-- tab2  -->
+								<div id="tab2" class="tab-pane fade in">
+									<div class="row">
+										<div class="col-md-12">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+												consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+												cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+												non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- /tab2  -->
+								
+							</div>
+							<!-- /product tab content  -->
+
+						</div>
+
+					</div>
+					<!-- /product tab -->
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /SECTION COMPRA PRODUCTO -->
+
+		<!-- footer -->
+		<footer class="footer">
+
+			<div class="contenedor-logo">
+	
+	
+				<div class="logo">
+					<label class="logo-text">D-Cell Santa Barbara</label>
+				</div>
+	
+			</div>
+	
+			<ul class="r-footer">
+				<!-- columna 0 -->
+				<li class="columna">
+					<h2 class="Titulo">Productos</h2>
+					<ul class="box">
+						<li><a href="#">Accesorios</a></li>
+						<li><a href="#">Consolas</a></li>
+						<li><a href="#">Smartphones</a></li>
+						<li><a href="#">Smartwatch</a></li>
+					</ul>
+				</li>
+				<!-- columna 1 -->
+				<li class="columna">
+					<h2 class="Titulo">Servicios</h2>
+					<ul class="box">
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Contract</a></li>
+					</ul>
+				</li>
+				<!-- columna 2 -->
+				<li class="columna">
+					<h2 class="Titulo">Privacidad</h2>
+					<ul class="box">
+						<li><a href="#">Privacidad</a></li>
+						<li><a href="#">Terminos de uso</a></li>
+					</ul>
+				</li>
+				<!-- COLUMNA 3 -->
+				<li class="columna">
+					<h2 class="Titulo">Cuenta</h2>
+					<ul class="box">
+						<li><a href="#">Iniciar sesión</a></li>
+						<li><a href="#">Registrarse</a></li>
+						<li><a href="#">Seguridad</a></li>
+						<li><a href="#">Olvide mi clave</a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</li>
+				<!-- columna 1 -->
+				<li class="columna">
+					<h2 class="Titulo">Garantia</h2>
+					<ul class="box">
+						<li><a href="#">Terminos de uso</a></li>
+						<li><a href="#">Condiciones</a></li>
+						<li><a href="#">Mas detalles</a></li>
+					</ul>
+				</li>
+				<!-- columna 2 -->
+				<li class="columna">
+					<h2 class="Titulo">Empresa</h2>
+					<ul class="box">
+						<li><a href="#">Misión</a></li>
+						<li><a href="#">Visión</a></li>
+						<li><a href="#">Valores</a></li>
+						<li><a href="#">Quienes somos?</a></li>
+					</ul>
+				</li>
+				<!-- COLUMNA 3 -->
+				<li class="columna">
+					<h2 class="Titulo">Acerca de D-Cell</h2>
+					<ul class="box">
+						<li><a href="#">Contactar</a></li>
+						<li><a href="#">Ubicación</a></li>
+					</ul>
+				</li>
+			</ul>
+	
+		</footer>
+	
+		<!-- stick-footer -->
+		<footer class="stick">
+			<div class="stick-footer">
+				Derechos reservados │ Juan José Ordoñez Barahona
+			</div>
+		</footer>
+
+	</body>
+
+	<!-- scripts para la seccion de animacion de barra de navegacion mobil menu -->
+    <script src="../styles/js/main.js"></script>
+	<!-- jQuery Plugins -->
+	<script src="../styles/js/modulo_user/jquery.min.js"></script>
+	<!-- cambiar -->
+	<script src="../styles/js/modulo_user/bootstrap.min.js"></script>
+	<script src="../styles/js/modulo_user/slick.min.js"></script>
+	<script src="../styles/js/modulo_user/jquery.zoom.min.js"></script>
+	<script src="../styles/js/modulo_user/main.js"></script>
+
+</html>

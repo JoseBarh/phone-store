@@ -1,0 +1,23 @@
+.stick-footer{
+    background-color: #ff000000;
+    line-height: 3;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: #999999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.stick-footer{
+    cursor: default;
+}
+
+.stick-footer a{
+    text-decoration: none;
+	color: #000000;
+}
+
+.stick-footer a:hover{
+    color: #999999;
+}
+
