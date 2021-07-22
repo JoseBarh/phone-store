@@ -6,11 +6,16 @@ class Database{
     private $password;
     private $charset;
     public function __construct(){
-        $this->host = 'fdb28.awardspace.net';
-        $this->db = '3699858_examen';
-        $this->user = '3699858_examen';
-        $this->password = 'enelfin2012';
+        $this->host = '';
+        $this->db = 'dbdcell';
+        $this->user = 'root';
+        $this->password = '';
         $this->charset = 'utf8mb4';
+        // $this->host = 'fdb28.awardspace.net';
+        // $this->db = '3699858_examen';
+        // $this->user = '3699858_examen';
+        // $this->password = '';
+        // $this->charset = 'utf8mb4';
     }
     function connect(){
         try{
