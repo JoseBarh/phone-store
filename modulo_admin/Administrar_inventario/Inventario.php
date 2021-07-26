@@ -248,7 +248,7 @@
 
 <script>
     $(document).ready(function() {
-     
+        puto
         $('#tabla').DataTable({
             //filtrado de busqueda 
             "search": {
