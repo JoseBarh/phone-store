@@ -249,18 +249,18 @@
 <script>
     $(document).ready(function() {
      
-     $('#tabla').DataTable({
-         //filtrado de busqueda 
-         "search": {
-             // caseInsensitive coincidencia entre minusculas y mayusculas
-             "caseInsensitive": false,
-             // Realiza busquedas inteligente mas exactas evita la sugerencia de relaciones
-             "smart": false,
-         }
-     })
-
- } );
-    
+        $('#tabla').DataTable({
+            //filtrado de busqueda 
+            "search": {
+            // caseInsensitive coincidencia entre minusculas y mayusculas
+            "caseInsensitive": true,
+            // Realiza busquedas inteligente mas exactas evita la sugerencia de relaciones
+            "smart": false,
+            //Tratar como una expresión regular () o no 
+            "regex": true,
+            }
+        })
+    });  
 </script>
 
 

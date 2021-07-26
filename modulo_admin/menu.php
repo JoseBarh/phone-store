@@ -249,11 +249,10 @@
             <nav class="navbar flex-nowrap p-0">
                 <!-- logo PC y mobile -->
                 <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
-                    <!-- Logo For Mobile View -->
+                    <!-- Logo para Mobile  -->
                     <a class="navbar-brand navbar-brand-mobile" href="">
                         <img class="img-fluid w-100" src="../src/logo/D-Cell1280x1280.png" alt="Graindashboard">
                     </a>
-                
                     <!-- End Logo For Mobile View -->
 
                     <!-- Logo For Desktop View -->
