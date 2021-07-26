@@ -248,7 +248,7 @@
 
 <script>
     $(document).ready(function() {
-        
+        //putto
         $('#tabla').DataTable({
             //filtrado de busqueda 
             "search": {
