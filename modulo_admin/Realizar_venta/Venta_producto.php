@@ -248,6 +248,8 @@
     $(document).ready(function() {
         
         $('#tabla').DataTable({
+            // numero de filas que mostrara en tabla
+            "pageLength": 25,
             //filtrado de busqueda 
             "search": {
             // caseInsensitive coincidencia entre minusculas y mayusculas

@@ -204,7 +204,7 @@
     //Ventas del dia es necesario capturar la fecha de america, se uso El Salvador de referencia
     date_default_timezone_set('America/El_Salvador');
     $FechaActual = date("d"); 
-    $consulta12 = $db->connect()->prepare('SELECT Nombre,Producto, PrecioVendido, Ganancia FROM t_registro_venta 
+    $consulta12 = $db->connect()->prepare('SELECT Nombre,Producto, CantidadVendida, TotalVenta, Ganancia FROM t_registro_venta 
         INNER JOIN t_inventario ON t_inventario.IDProducto = t_registro_venta.IDProducto
         INNER JOIN t_provedor ON t_inventario.IDProvedor = t_provedor.IDProvedores
         INNER JOIN t_tipo_producto ON t_inventario.IDTipoProducto = t_tipo_producto.IDTipoProducto
@@ -271,7 +271,6 @@
                             data-close-invoker="#sidebarClose"
                             data-target="#sidebar"
                             data-target-wrapper="body">
-                            <!-- <i class='bx bx-menu-alt-left' style="font-size: 30px;"></i> -->
                             <i class='bx bx-menu' style="font-size: 30px;"></i>
                         </a>
                         <!-- fin -->
@@ -320,7 +319,7 @@
         <!-- End Header -->
 
         <main class="main">
-
+        
             <!-- barra de navegacion -->
             <aside id="sidebar" class="js-custom-scroll side-nav">
                 <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
@@ -370,21 +369,37 @@
                     <!-- Fin ventas -->
 
                     <!-- Inventario -->
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link media align-items-center" href="Administrar_inventario/Inventario.php">
+                    <li class="side-nav-menu-item side-nav-has-menu" >
+
+                        <a class="side-nav-menu-link media align-items-center" href="#" data-target="#Inventario">
                             <span class="side-nav-menu-icon d-flex mr-3">
                                 <i class="fas fa-boxes"></i>
                             </span>
                             <span class="side-nav-fadeout-on-closed media-body">Inventario</span>
+                            <span class="side-nav-control-icon d-flex">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
                         </a>
+    
+                        <ul id="Inventario" class="side-nav-menu side-nav-menu-second-level mb-0">
+                            <li class="side-nav-menu-item">
+                                <a class="side-nav-menu-link" href="Administrar_inventario/Inventario.php">Ver productos</a>
+                            </li>
+                            <li class="side-nav-menu-item">
+                                <a class="side-nav-menu-link" href="Administrar_inventario/Registrar_producto.php">Registrar productos</a>
+                            </li>
+                        </ul>
+
                     </li>
-                    <!-- Fin Inventario -->
+                    <!-- Fin inventario -->
 
                      <!-- Title -->
                      <li class="sidebar-heading h6">Tipos</li>
                      <!-- End Title -->
 
-                    <!-- Tipos -->
+                    
+                     <!-- Tipos -->
                     <li class="side-nav-menu-item side-nav-has-menu">
 
                         <a class="side-nav-menu-link media align-items-center" href="#" data-target="#Tipos">
@@ -456,11 +471,10 @@
                         <!-- TotalVendido -->
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
-                            <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
-
+                            <style>
+                            </style>
+                            <div class="card flex-row align-items-center p-3 p-md-4" style=":hover: red;">
+                                
                                 <div>
                                     <h4 class="lh-1 mb-1">Total vendido</h4>
                                     <h6 class="mb-0">
@@ -471,7 +485,10 @@
                                         ?>
                                     </h6>
                                 </div>
-                                <!-- <i class="gd-arrow-up icon-text d-flex text-primary ml-auto"></i> -->
+                                    
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                             </div>
                             <!-- End Widget -->
                         </div>
@@ -480,9 +497,7 @@
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
                             <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
+                                
                                 <div>
                                     <h4 class="lh-1 mb-1">Ganancias</h4>
                                     <h6 class="mb-0">
@@ -493,6 +508,9 @@
                                         ?>
                                     </h6>
                                 </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                                 <!-- <i class="gd-arrow-up icon-text d-flex text-secondary ml-auto"></i> -->
                             </div>
                             <!-- End Widget -->
@@ -501,10 +519,8 @@
                         <!-- TotalVendidoSmartPhones -->
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
-                            <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
+                            <div class="card flex-row align-items-center p-3 p-md-4 bg-cyan">
+                                
                                 <div>
                                     <h4 class="lh-1 mb-1">Total venta smartphone</h4>
                                     <h6 class="mb-0">
@@ -515,6 +531,9 @@
                                         ?>
                                     </h6>
                                 </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                                 <!-- <i class="gd-arrow-up icon-text d-flex text-secondary ml-auto"></i> -->
                             </div>
                             <!-- End Widget -->
@@ -524,9 +543,6 @@
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
                             <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
                                 <div>
                                     <h4 class="lh-1 mb-1">Total ganancia smartphone</h4>
                                     <h6 class="mb-0">
@@ -537,6 +553,9 @@
                                         ?>
                                     </h6>
                                 </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                                 <!-- <i class="gd-arrow-up icon-text d-flex text-secondary ml-auto"></i> -->
                             </div>
                             <!-- End Widget -->
@@ -546,9 +565,6 @@
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
                             <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-users icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
                                 <div>
                                     <h4 class="lh-1 mb-1">Total venta accesorio</h4>
                                     <h6 class="mb-0">
@@ -559,6 +575,9 @@
                                         ?>
                                     </h6>
                                 </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                                 <!-- <i class="gd-arrow-up icon-text d-flex text-warning ml-auto"></i> -->
                             </div>
                             <!-- End Widget -->
@@ -568,9 +587,6 @@
                         <div class="col-lg-6 col-xl-6 mb-6 mb-xl-6">
                             <!-- Widget -->
                             <div class="card flex-row align-items-center p-3 p-md-4">
-                                <div class="icon icon-lg bg-soft-success rounded-circle mr-3">
-                                    <i class="fas fa-users icon-text d-inline-block text-success" style="font-size: 25px;"></i>
-                                </div>
                                 <div>
                                     <h4 class="lh-1 mb-1">Total ganancia accesorio</h4>
                                     <h6 class="mb-0">
@@ -581,12 +597,13 @@
                                         ?>
                                     </h6>
                                 </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-success" style="font-size: 25px;"></i>
+                                </div>
                                 <!-- <i class="gd-arrow-up icon-text d-flex text-warning ml-auto"></i> -->
                             </div>
                             <!-- End Widget -->
                         </div>
-
-
 
                     </div>
                     <!-- fin detalles efectivo -->
@@ -741,15 +758,17 @@
                                                 <tr>
                                                     <td>
                                                         <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6><?php echo $row['Producto']; ?></h6>
-                                                                <p class="text-muted m-b-0"><?php echo $row['Nombre']; ?></p>
+                                                            <div class="d-inline-block">                                                                
+                                                                <h5><?php echo $row['CantidadVendida'];?> <?php echo $row['Producto']; ?></h5>
+                                                                <p class="text-muted m-b-0"><?php echo $row['Nombre']; ?></p> 
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td class="text-right">
-                                                        <h6 class="f-w-700"><?php echo $row['PrecioVendido']; ?><i class="fas fa-level-up-alt text-c-green m-l-10"></i></h6>
+                                                        <h6 class="f-w-700"><?php echo $row['TotalVenta']; ?> Lps</h6>
                                                     </td>
+                                                    
+                                                    
                                                 </tr>
 
                                                 <?php

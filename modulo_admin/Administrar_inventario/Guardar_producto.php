@@ -28,12 +28,12 @@
     if ($consulta->execute()){
         echo'<script type="text/javascript">
         alert("Exito al registrar producto");
-        window.location.href="Inventario.php";
+        window.location.href="Registrar_producto.php";
         </script>';
     }else{
         echo'<script type="text/javascript">
         alert("Error al conectar con la base de datos.");
-        window.location.href="Inventario.php";
+        window.location.href="Registrar_producto.php";
         </script>'; 
     }
 
