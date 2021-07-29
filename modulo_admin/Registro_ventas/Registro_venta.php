@@ -245,7 +245,7 @@
                 
             ],
             // numero de filas que mostrara en tabla
-            "pageLength": 25,
+            "pageLength": 100,
             "search": {
             // caseInsensitive coincidencia entre minusculas y mayusculas
             "caseInsensitive": true,
