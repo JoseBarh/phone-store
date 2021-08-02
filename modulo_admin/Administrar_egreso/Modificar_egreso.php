@@ -15,14 +15,14 @@
         }
     }
     
-    $IDProvedor=$_REQUEST['IDProvedor'];
+    $IDEgreso=$_REQUEST['IDEgreso'];
 
     $db = new Database();
-    $consulta = $db->connect()->prepare("SELECT * FROM t_provedor WHERE IDProvedores='$IDProvedor'");
+    $consulta = $db->connect()->prepare("SELECT * FROM t_egreso WHERE IDEgreso='$IDEgreso'");
     $consulta->execute();
     $row=$consulta->fetch();
     
-    if($IDProvedor==false){
+    if($IDEgreso==false){
         echo'<script type="text/javascript">
         alert("Error al obtener ID para modificar. Intente de nuevo.");
         window.location.href="Provedor.php";
@@ -87,47 +87,23 @@
 <body class="body">
 
     <div class="my-container">
-        <form action="Actualizar_provedor.php?IDProvedor=<?php echo $row['IDProvedores'];?>" method="POST" id="form">
+        <form action="Actualizar_egreso.php?IDEgreso=<?php echo $row['IDEgreso'];?>" method="POST" id="form">
 
             <!-- titulo -->
-            <p class="Titulo">Registrar provedor</p>
+            <p class="Titulo">Actualizar egreso</p>
 
             <!-- primer fila de campos -->
             <div class="row justify-content-md-center">
 
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="Empresa">
-                        <input type="text" name="Empresa" placeholder="Nombre de empresa" value="<?php echo $row['Empresa'];?>">Empresa
+                <div class="col-md-6 col-sm-3 columna">
+                    <div class="Descripcion">
+                        <input type="text" name="Descripcion" placeholder="Descripcion de gasto" value="<?php echo $row['Descripcion'];?>">Descripción
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="RTN">
-                        <input type="text" name="RTN" placeholder="RTN de empresa" value="<?php echo $row['RTN'];?>">RTN
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="Telefono">
-                        <input type="text" name="Telefono" placeholder="Telefono de empresa" value="<?php echo $row['Telefono'];?>">Telefono
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="Direccion">
-                        <input type="text" name="Direccion" placeholder="Direccion de empresa" value="<?php echo $row['Direccion'];?>">Dirección
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="Correo">
-                        <input type="text" name="Correo" placeholder="Correo de empresa" value="<?php echo $row['Correo'];?>">Correo
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-3 columna">
-                    <div class="SitioWeb">
-                        <input type="text" name="SitioWeb" placeholder="Sitio Web de empresa" value="<?php echo $row['SitioWeb'];?>">Sitio web
+                <div class="col-md-6 col-sm-3 columna">
+                    <div class="Egreso">
+                        <input type="text" name="Egreso" placeholder="Egreso de empresa" value="<?php echo $row['Egreso'];?>">Egreso
                     </div>
                 </div>
 
@@ -141,7 +117,7 @@
                 </div>
     
                 <div class="col-md-6 col-sm-3 columna">
-                    <a style="cursor: pointer;" class="btn_registrar" href="Provedor.php">Cancelar</a>
+                    <a style="cursor: pointer;" class="btn_registrar" href="Egreso.php">Cancelar</a>
                 </div>
 
             </div>

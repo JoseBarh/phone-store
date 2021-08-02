@@ -13,6 +13,7 @@
             header('location: ../index.php');
         }
     }
+
     // Enlazamos base de datos para la recopilacion de datos
     include_once '../db/database.php';
     $db = new Database();
@@ -36,6 +37,7 @@
         INNER JOIN t_tipo_pago ON t_tipo_pago.IDTipoPago = t_registro_venta.IDTipoPago
         WHERE TipoProducto = "SmartPhone" OR TipoProducto= "Tablet"');
     $consulta13->execute();
+    
     //TotalGananciaSmartPhones
     $consulta14= $db->connect()->prepare('SELECT SUM(Ganancia) AS TotalGananciaSmartPhones FROM t_registro_venta 
         INNER JOIN t_inventario ON t_inventario.IDProducto = t_registro_venta.IDProducto
@@ -59,6 +61,7 @@
         INNER JOIN t_tipo_pago ON t_tipo_pago.IDTipoPago = t_registro_venta.IDTipoPago
         WHERE TipoProducto = "Accesorio"');
     $consulta15->execute();
+
     //TotalGananciaAccesorios
     $consulta16= $db->connect()->prepare('SELECT SUM(Ganancia) AS TotalGananciaAccesorios FROM t_registro_venta 
         INNER JOIN t_inventario ON t_inventario.IDProducto = t_registro_venta.IDProducto
@@ -71,7 +74,9 @@
         WHERE TipoProducto = "Accesorio"');
     $consulta16->execute();
 
-
+    //TotalGastos
+    $consulta17= $db->connect()->prepare('SELECT SUM(Egreso) AS TotalGasto FROM t_egreso');
+    $consulta17->execute();
 
     //Clientes registrados
     $consulta3 = $db->connect()->prepare('SELECT COUNT(*) AS R_TotalUsuarios FROM t_usuarios WHERE IDRol="2"');
@@ -257,7 +262,7 @@
 
                     <!-- Logo For Desktop View -->
                     <a class="navbar-brand navbar-brand-desktop" href="/">
-                        <img class="side-nav-show-on-closed" src="../src/logo/D-Cell1280x1280.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                        <img class="side-nav-show-on-closed" src="../src/logo/DCell_121x121.png" alt="Graindashboard" style="width: auto; height: 33px;">
                         <img class="side-nav-hide-on-closed" src="../src/logo/D-Cell-Horizontal.png" alt="Graindashboard" style="width: auto; height: 33px;">
                     </a>
                     <!-- End Logo For Desktop View -->
@@ -445,6 +450,21 @@
                     </li>
                     <!-- Fin provedores -->
 
+                     <!-- Title -->
+                     <li class="sidebar-heading h6">Egresos</li>
+                    <!-- End Title -->
+
+                    <!-- egreso -->
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link media align-items-center" href="Administrar_egreso/Egreso.php">
+                        <span class="side-nav-menu-icon d-flex mr-3">
+                            <i class='bx bxs-book'></i>
+                        </span>
+                            <span class="side-nav-fadeout-on-closed media-body">Egresos</span>
+                        </a>
+                    </li>
+                    <!-- Fin egreso -->
+
                 </ul>
             </aside>
             <!-- fin barra de navegacion -->
@@ -605,6 +625,28 @@
                             <!-- End Widget -->
                         </div>
 
+                        <!-- TotalGastos -->
+                        <div class="col-lg-12 col-xl-12 mb-12 mb-xl-12">
+                            <!-- Widget -->
+                            <div class="card flex-row align-items-center p-3 p-md-4">
+                                <div>
+                                    <h4 class="lh-1 mb-1">Total gastos</h4>
+                                    <h6 class="mb-0">
+                                        <?php
+                                            while($row=$consulta17->fetch()){
+                                            echo $row['TotalGasto'];
+                                            }
+                                        ?>
+                                    </h6>
+                                </div>
+                                <div class="icon icon-lg rounded-circle border mr-5 ml-auto">
+                                    <i class="fas fa-dollar-sign icon-text d-inline-block text-danger" style="font-size: 25px;"></i>
+                                </div>
+                                <!-- <i class="gd-arrow-up icon-text d-flex text-warning ml-auto"></i> -->
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+
                     </div>
                     <!-- fin detalles efectivo -->
 
@@ -742,9 +784,11 @@
                     <div class="row">
                         <div class="col-lg-12 mb-3 mb-xl-4">
                             <div class="card table-card">
+
                                 <div class="card-header">
                                     <h5>Productos vendidos hoy</h5>
                                 </div>
+
                                 <div class="card-block">
                                     <div class="table-responsive">
 

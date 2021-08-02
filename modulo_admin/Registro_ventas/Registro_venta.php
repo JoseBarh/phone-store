@@ -91,10 +91,8 @@
                         <th>Existencias</th>
                         <th>Detalles</th>
                         <th>Usuario</th>
-                        <th>Rol</th>
                         <th>Telefono</th>
                         <th>Proveedor</th>
-                        <th>Dirección</th>
                         <th>Tipo pago</th>
                         <th>Precio Vendido</th>
                         <th>Cantidad vendida</th>
@@ -115,7 +113,7 @@
 
                                 $db = new Database();
                                 $consulta = $db->connect()->prepare('SELECT IDVentaProducto, t_inventario.IDProducto, Producto, FechaEntrada, PrecioCosto, PrecioVenta, Existencias, Detalles, 
-                                IDProvedores, Empresa, t_provedor.Direccion, TipoProducto, Marca, IDUsuarios, Rol, Nombre, t_usuarios.Telefono,
+                                IDProvedores, Empresa, TipoProducto, Marca, IDUsuarios, Nombre, t_usuarios.Telefono,
                                 TipoPago, FechaSalida, PrecioVendido, CantidadVendida, TotalVenta, PagoCliente, CambioCliente, Ganancia, Garantia 
                                 FROM t_registro_venta
                                 
@@ -142,10 +140,8 @@
                                         <td><?php echo $row['Existencias']?></td>
                                         <td><?php echo $row['Detalles']?></td>
                                         <td><?php echo $row['Nombre']?></td>
-                                        <td><?php echo $row['Rol']?></td>
                                         <td><?php echo $row['Telefono']?></td>
                                         <td><?php echo $row['Empresa']?></td>
-                                        <td><?php echo $row['Direccion']?></td>
                                         <td><?php echo $row['TipoPago']?></td>
                                         <td><?php echo $row['PrecioVendido']?></td>
                                         <td><?php echo $row['CantidadVendida']?></td>

@@ -81,15 +81,15 @@
                 <thead>
                     <tr>
                         <th>IDProducto</th>
-                        <th>IDProveedor</th>
-                        <th>IDTipoProducto</th>
-                        <th>IDMarca</th>
                         <th>Producto</th>
                         <th>Fecha entrada</th>
                         <th>Precio costo</th>
                         <th>Precio venta</th>
                         <th>Existencias</th>
                         <th>Detalles</th>
+                        <th>Proveedor</th>
+                        <th>TipoProducto</th>
+                        <th>Marca</th>
                         <th>Acción</th>
                     </tr>
                 </thead>
@@ -114,15 +114,16 @@
                                     <!-- Imprime la informacion obtenida en la tabla -->
                                     <tr>
                                         <td><?php echo $row['IDProducto']?></td>
-                                        <td><?php echo $row['Empresa']?></td>
-                                        <td><?php echo $row['TipoProducto']?></td>
-                                        <td><?php echo $row['Marca']?></td>
+                                        
                                         <td><?php echo $row['Producto']?></td>
                                         <td><?php echo $row['FechaEntrada']?></td>
                                         <td><?php echo $row['PrecioCosto']?></td>
                                         <td><?php echo $row['PrecioVenta']?></td>
                                         <td><?php echo $row['Existencias']?></td>
                                         <td><?php echo $row['Detalles']?></td>
+                                        <td><?php echo $row['Empresa']?></td>
+                                        <td><?php echo $row['TipoProducto']?></td>
+                                        <td><?php echo $row['Marca']?></td>
 
                                         <td><a class="btn btn-primary " href="Modificar_inventario.php?IDProducto=<?php echo $row['IDProducto'];?>">Modificar</a></td>
                                     </tr>

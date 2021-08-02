@@ -89,7 +89,9 @@
 
             <!-- header de celular -->
             <header class="nabvar-mobile">
+
                 <a class="navbar-mobile-link" href="index.html">D-Cell SB</a>
+                
                 <div>
                     <a class="navbar-mobile-link" id="btn-mobile"><i class='bx bx-menu'></i></a>
                 </div>
